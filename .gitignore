@@ -1,2 +1,4 @@
 coder\model\*
 tutorials
+transformers_s/*
+__pycache__/

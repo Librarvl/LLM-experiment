@@ -1,6 +1,9 @@
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
+import sys
+sys.path.append('/ssd1/liboran/gitspace/github_Librarvl/LLM-experiment/')
+
 import torch
 
 from train import TransformerTrainer
@@ -22,7 +25,6 @@ def main():
     # logger = create_logger(args)
     # init_system(args, logger)
     
-
     # 创建trainer
     trainer = TransformerTrainer()
     trainer.train()
