@@ -31,7 +31,7 @@ def load_model():
     path = "/home/work/wenku_yq/DataVault/models/Llama2-7b-hf"
     llama_config = AutoConfig.from_pretrained(path)
     # llama_config = LlamaConfig()
-    llama_model = LlamaModel(path)
+    llama_model = LlamaModel.from_pretrained(path)
 
     training_args = TrainingArguments(
         output_dir='./results',
