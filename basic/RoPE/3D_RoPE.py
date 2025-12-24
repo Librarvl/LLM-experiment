@@ -93,7 +93,14 @@ class RoPE3D(torch.nn.Module):
         
 
 def main():
-    RoPE3D()
+    ntokens, batch_size, nheads, dim = 100, 8, 8, 33
+    tokens = torch.rand(size=(ntokens, batch_size, nheads, dim))
+
+    poses, max_poses = [torch.rand(size=(batch_size, ntokens)), torch.rand(size=(batch_size, ntokens)), torch.rand(size=(batch_size, ntokens))], 1
+    positions = (poses, max_poses)
+
+    model = RoPE3D()
+    model(tokens, positions)
     
 
 if __name__ == "__main__":
