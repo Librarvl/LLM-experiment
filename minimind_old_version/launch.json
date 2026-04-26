@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug common",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/boran.lbr/program_code/project_D/audioset_parse/try.py",
+            "console": "integratedTerminal",
+            "args": [
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Debug minimind",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "E:\\code\\minimind_old\\trainer\\train_ppo.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--save_dir", "E:\\code\\minimind_old\\output",
+                "--reward_model_path", "E:\\code\\LLM_model\\internlm2-1_8b-reward",
+                "--max_seq_len", "128",
+                "--hidden_size", "768",
+                "--num_hidden_layers", "16",
+                "--data_path", "E:\\code\\minimind\\dataset\\rlaif.jsonl",
+                "--from_resume", "0"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Debug minimind-eval",
+            "type": "python",
+            "request": "launch",
+            "program": "/home/boran.lbr/gitspace/github/minimind/eval_llm.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--load_from", "/home/boran.lbr/LLM_model/MiniMind2",
+                "--hidden_size", "768",
+                "--num_hidden_layers", "16"
+            ],
+            "justMyCode": false
+        }
+    ]
+}

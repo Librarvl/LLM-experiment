@@ -2,3 +2,5 @@ coder\model\*
 tutorials
 transformers_s/*
 __pycache__/
+*.pth
+*.safetensors
